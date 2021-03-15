@@ -22,7 +22,7 @@ spec:
       - name: master
         image: "{{ .Values.redis.image.repository }}:{{ .Values.redis.image.tag }}"
         imagePullPolicy: {{ .Values.redis.image.pullPolicy }}
-        resources:
+        resources: {}
         {{- if .Values.redis.extraEnv }}
         env:
           {{- if .Values.redis.extraEnv }}
